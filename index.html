@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Skeleton adventures</title>
+    <link rel='stylesheet' href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<style>
+    .main {
+        text-align: center;
+        background: #1b1d1d no-repeat fixed center top;
+    }
+
+    .link {
+        width: 100%;
+        color: darkred;
+        font-size: 150%;
+    }
+
+    #inputtext {
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        background-color: brown;
+        color: white;
+        font-size: 16pt;
+    }
+
+    ::placeholder {
+        color: white;
+        font-size: 1em;
+    }
+
+    .name{
+        color: #6e0901;
+        font-size: 20pt;
+    }
+
+    #header{
+        color: white;
+        font-size: 300%;
+    }
+
+    #submitbutton{
+        font-size: 15pt;
+    }
+
+    #inputform{
+        margin: 10%;
+    }
+
+</style>
+
+<body class="main">
+    <form class="w3-animate-bottom" action="game.html" method="get" id="inputform">
+        <label id="header">Skeleton Adventures<br><br></label>
+        <img src="image/skeleton_move.gif" alt="Move" >
+        <label class="name">Skeleton name </label>
+        <input id="inputtext" placeholder="Deadman" class="w3-round-large" ><br><br>
+    <button type="submit" onclick="saveName()" id="submitbutton" class="w3-button w3-red w3-round-large" >
+        Start Adventures
+    </button>
+    </form>
+    <script>
+        $(document).ready(() => {
+            let name = localStorage['currentName'];
+            if (!name) {
+                name = 'Deadman';
+            }
+            $('#inputtext').val(name);
+        });
+
+        function saveName() {
+            localStorage['currentName'] = $('#inputtext').val();
+        }
+    </script>
+    <div class="w3-animate-bottom w3-display-bottommiddle" >
+        <a class="link" href="scores.html">Records</a>
+    </div>
+</body>
+
+</html>

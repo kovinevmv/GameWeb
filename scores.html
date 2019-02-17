@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Рекорды в игре</title>
+    <link rel='stylesheet' href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="scores.js"></script>
+</head>
+<style>
+    .main {
+        text-align: center;
+        background: #1a1c1c no-repeat fixed center top;
+    }
+
+    .link {
+        width: 100%;
+        color: royalblue;
+        font-size: 150%;
+    }
+
+    .w3-display-middle {
+        width: 600px;
+        height: 500px;
+    }
+</style>
+<body class="main">
+    <div class="w3-display-middle">
+        <div class="w3-card-4">
+            <div class="w3-container w3-wide w3-center" style="background-color: #542E2F">
+                <p class="w3-text-white w3-xlarge">Skeletons scored points</p>
+            </div>
+            <table class="w3-table-all w3-centered" id="scores">
+                <tr>
+                    <th>Place</th>
+                    <th>Name</th>
+                    <th>Score</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w3-animate-bottom">
+        <a class="link" href="index.html">Start game</a>
+    </div>
+</body>
+</html>

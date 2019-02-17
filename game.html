@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Skeleton Adventures</title>
+    <link rel='stylesheet' href="https://www.w3schools.com/w3css/4/w3.css">
+	<link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="info.js"></script>
+	<script src= "managers/spriteManager.js"></script>
+	<script src= "managers/mapManager.js"></script>
+	<script src= "managers/eventManager.js"></script>
+	<script src= "managers/physicsManager.js"></script>
+	<script src= "managers/soundManager.js"></script>
+	<script src= "managers/objectManager.js"></script>
+    <script src= "managers/gameManager.js"></script>
+	<script src="game.js"></script>
+</head>
+<style>
+    #gameRulesModal {
+        display: block;
+        width: 30%
+    }
+
+    .main {
+        text-align: center;
+        background: #1a1c1c no-repeat fixed center top;
+    }
+
+    .link {
+        width: 100%;
+        color: darkred;
+        font-size: 100%;
+    }
+
+    .canvas {
+        outline: 4px solid #646464;
+        background: url("image/background.png") center;
+    }
+</style>
+
+<body class="main">
+<div style="position: relative;">
+	<div class="w3-container w3-card-4 w3-left" style="width: 70%">
+		<div style="background-color: #542E2F; font-family: 'ZCOOL QingKe HuangYou', cursive">
+			<div class="w3-panel w3-wide w3-text-white">
+				<div class="w3-row">
+					<p id="playerName" class="w3-large w3-third"></p>
+					<p id="playerScore" class="w3-large w3-third"></p>
+					<p id="currentLevel" class="w3-large w3-third"></p>
+				</div>
+			</div>
+			<canvas class="canvas w3-margin" id="canvas" width="1120" height="650"></canvas>
+		</div>
+	</div>	
+
+	<div class="w3-card-4 w3-right" id="gameRulesModal">
+		<div class="w3-card w3-container w3-text-white" style="font-family: 'ZCOOL QingKe HuangYou', cursive;">
+			<div style="background-color: #646464">
+				<div class="w3-panel w3-wide" style="background-color: #542E2F">
+					<p class="w3-large">
+						Rules
+					</p>
+				</div>
+				<div class="w3-section w3-large" class="gameInfoDiv">
+					<ul class="w3-ul">
+						<li>
+							<p>
+								WASD - movement <br>
+								Space - set pause <br>
+								Esc - continue
+							</p>
+						</li>
+						<li>
+							<p>
+								On your way there will be obstacles - fire holes and demons. <br>
+								They should be avoided!<br><br>
+
+								If you're on a boar, you move faster.<br>
+								If you're on a griffin, you're not afraid of fire, because you are flying<br>
+							</p>
+						</li>
+						<br><a href="scores.html">Records</a>
+					</ul>
+					<button class="w3-button w3-green w3-section" id="startGame">Start</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<div class="w3-modal w3-text-white" style="font-family: 'ZCOOL QingKe HuangYou', cursive;" id='gameResultModal'>
+		<div class="w3-modal-content w3-animate-zoom" style="background-color: #646464">
+			<div class="w3-panel w3-wide" style="background-color: #542E2F">
+				<p id="gameResult" class="w3-xlarge">
+				</p>
+			</div>
+			<div class="w3-section w3-xlarge" >
+				<p id="gameResultText">
+				</p>
+			</div>
+			<div class="w3-section w3-xlarge">
+				<div class='w3-row'>
+					<a class="link w3-half" href="game.html">Try again</a>
+					<a class="link w3-half" href="index.html">Exit</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="w3-modal" id='nextLevelAlertModal'>
+		<div class="w3-modal-content w3-pale-red w3-animate-zoom w3-text-white" style="font-family: 'ZCOOL QingKe HuangYou', cursive; background-color: #646464">
+			<div class="w3-section w3-xlarge w3-padding" style="background-color: #542E2F">
+				<p>
+					Level completed<br>
+					Ready?
+				</p>
+			</div>
+			<button class="w3-button  w3-green w3-section" id="nextLevel">
+				Start
+			</button>
+		</div>
+	</div>
+</body>
+</html>
