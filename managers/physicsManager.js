@@ -51,4 +51,4 @@ class physicManager {
         }
         return null; // объект не найден
     }
-};
+}

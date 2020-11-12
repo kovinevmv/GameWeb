@@ -148,4 +148,4 @@ class gameManager { // менеджер игры
         this.curr_level++;
         SM.playBG(false);
 	}
-};
+}

@@ -19,12 +19,12 @@ class Fuel extends Entity{
     // Отрисовка картиника на карте
     draw(ctx) {
         sm.drawSprite(ctx, this.dirSprite, this.pos_x, this.pos_y);
-    };
+    }
     // Уничтожение
     kill() {
         gm.kill(this);
     }
-    update() {};
+    update() {}
 }
 
 // Демон
@@ -45,10 +45,10 @@ class Object2 extends Entity{
     }
     draw(ctx) {
         sm.drawSprite(ctx, this.dirSprite, this.pos_x, this.pos_y);
-    };
+    }
     kill() {
         gm.kill(this);
-    };
+    }
     update() {}
 }
 
@@ -74,9 +74,9 @@ class Border extends Entity{
         super();
         this.move_x = 0;
         this.move_y = 0;
-    };
+    }
 
-    draw(ctx) {};
+    draw(ctx) {}
 }
 
 // Финиш
@@ -85,9 +85,9 @@ class Finish extends Entity{
         super();
         this.move_x = 0;
         this.move_y = 0;
-    };
+    }
 
-    draw(ctx) {};
+    draw(ctx) {}
 }
 
 // Игрок
@@ -144,12 +144,12 @@ class Player extends Entity {
         }
         // Нариовать картинку игрока
         sm.drawSprite(ctx, this.dirSprite, this.pos_x, this.pos_y);
-    };
+    }
 
     // Обновление физики
     update() {
         pm.update(this);
-    };
+    }
 
     // Если игрок сопрокоснулся с чем-то
     onTouchEntity(obj) {
@@ -233,7 +233,7 @@ class Player extends Entity {
             this.pos_x += this.speed;
         }
 
-    };
+    }
     kill() {
         gm.kill(this);
     }

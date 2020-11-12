@@ -43,4 +43,4 @@ class eventsManager {
         if (action)
             em.action[action] = false; // отменили действие
     }
-};
+}
