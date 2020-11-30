@@ -26,7 +26,7 @@ class soundManager {
 			this.Music.volume = 0.3;
 			this.done = true;
 		}
-	};
+	}
 
 	// Запуск/остновка фоновой музыки
 	playBG(x){
@@ -36,18 +36,18 @@ class soundManager {
 		// Если false, остановка
 		else 
 			this.Music.pause();
-	};
+	}
 
 	// Запуск музыки по индексу из массива
 	playSound(x){
 		this.Audio.pause();
 		this.Audio.src = this.src_array[x - 1];
 		this.Audio.play();
-	};
+	}
 
 	// Остновка всей музыки
 	stopAll(){
 		this.Audio.pause();
 		this.Music.pause();
-	};
-};
+	}
+}

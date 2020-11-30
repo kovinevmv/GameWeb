@@ -66,4 +66,4 @@ class spriteManager {
         }
         return null; // не нашли спрайт
     }
-};
+}
